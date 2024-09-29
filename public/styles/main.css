@@ -1,0 +1,6 @@
+h1 {
+    background:
+        url("../images/logo.jpg") left / auto 48px no-repeat,
+        url("../images/logo.jpg") right / auto 48px no-repeat;
+}
+

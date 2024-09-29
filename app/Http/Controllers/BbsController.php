@@ -9,14 +9,13 @@ class BbsController extends Controller
 {
     public function index()
     {
-        $bbs = Bb::latest()->get();
-        $s = "Объявления\r\r\r\n";
-        foreach ($bbs as $bb)
-        {
-            $s .= $bb->title . "\r\n";
-            $s .= $bb->price . " he,.\r\n";
-            $s .= "\r\n";
-        }
-        return response($s);
+        $context = ['bbs' => Bb::latest()->get()];
+        return view('index', $context);
+
+    }
+
+    public function detail(Bb $bb)
+    {
+        return view('detail', ['bb' => $bb]);
     }
 }
