@@ -17,11 +17,13 @@
                     <td>{{$bb->price}}</td>
                     <td>
                         <a href="{{route('detail', ['bb'=>$bb->id])}}">Подробнее…</a>
+                        <a href="{{ route('bb.edit', ['bb' => $bb->id]) }}">Изменить</a>
+                        <a href="{{ route('bb.delete', ['bb' => $bb->id]) }}">Удалить</a>
                     </td>
                 </tr>
             @endforeach
             </tbody>
         </table>
     @endif
-@endsection('main')
+@endsection
 

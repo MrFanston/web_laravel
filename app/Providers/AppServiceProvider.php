@@ -6,6 +6,8 @@ use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
+    protected $policies = ['App\Models\Вb' => 'App\Policies\ВbPolicy',];
+
     /**
      * Register any application services.
      */
